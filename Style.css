@@ -1,0 +1,398 @@
+/* ==========================================
+   ABC College Website
+   Author: Your Name
+   Description: Modern Responsive College Website
+========================================== */
+
+/* ===============================
+   Google Font
+================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f8fbff;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ===============================
+   Variables
+================================== */
+
+:root {
+    --primary: #0d6efd;
+    --secondary: #0b5ed7;
+    --light: #f8fbff;
+    --white: #ffffff;
+    --dark: #212529;
+    --text: #555;
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    --radius: 16px;
+}
+
+/* ===============================
+   Global
+================================== */
+
+section {
+    padding: 90px 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+
+p {
+    color: var(--text);
+}
+
+/* ===============================
+   Navbar
+================================== */
+
+.navbar {
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.navbar-brand img {
+    width: 45px;
+    height: 45px;
+}
+
+.nav-link {
+    color: #444;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: var(--primary);
+    transition: .3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===============================
+   Hero Section
+================================== */
+
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef6ff, #ffffff);
+}
+
+.hero-section h1 {
+    color: #1d3557;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+}
+
+/* ===============================
+   Buttons
+================================== */
+
+.btn {
+    border-radius: 50px;
+    padding: 12px 28px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-3px);
+}
+
+/* ===============================
+   Cards
+================================== */
+
+.card {
+    border: none;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: .35s ease;
+    background: var(--white);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* ===============================
+   About Cards
+================================== */
+
+#about .card {
+    height: 100%;
+}
+
+#about h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   Admission
+================================== */
+
+#admission {
+    background: linear-gradient(135deg, #0d6efd, #1b7cff);
+    color: white;
+}
+
+#admission p,
+#admission h2 {
+    color: white;
+}
+
+/* ===============================
+   Faculty
+================================== */
+
+#faculty .card img {
+    height: 300px;
+    object-fit: cover;
+}
+
+#faculty small {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ===============================
+   Gallery
+================================== */
+
+#gallery img,
+section img {
+    border-radius: 15px;
+}
+
+section img:hover {
+    transform: scale(1.04);
+    transition: .35s;
+    box-shadow: var(--shadow);
+}
+
+/* ===============================
+   Contact
+================================== */
+
+.form-control {
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid #d7d7d7;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+textarea {
+    resize: none;
+}
+
+/* ===============================
+   Footer
+================================== */
+
+footer {
+    background: #0b1728;
+}
+
+footer h5 {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    transition: .3s;
+}
+
+footer a:hover {
+    color: #4ea3ff;
+}
+
+footer i {
+    font-size: 22px;
+}
+
+/* ===============================
+   Fade Animation
+================================== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===============================
+   Responsive
+================================== */
+
+@media (max-width:992px) {
+
+    .hero-section {
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-section img {
+        margin-top: 40px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    section {
+        padding: 70px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .hero-section h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 120px 0 70px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .col-lg-3,
+    footer .col-lg-6 {
+        margin-bottom: 25px;
+    }
+
+}
+/* ======================================
+   Button Ripple Effect
+====================================== */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 600ms linear;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
