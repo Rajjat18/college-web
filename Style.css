@@ -29,8 +29,8 @@ body {
 ================================== */
 
 :root {
-    --primary: #0d6efd;
-    --secondary: #0b5ed7;
+    --primary: #1b2533;
+    --secondary: #566479;
     --light: #f8fbff;
     --white: #ffffff;
     --dark: #212529;
@@ -70,7 +70,7 @@ p {
 
 .navbar {
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(222, 207, 207, 0.96);
     backdrop-filter: blur(10px);
 }
 
@@ -200,7 +200,7 @@ p {
 ================================== */
 
 #admission {
-    background: linear-gradient(135deg, #0d6efd, #1b7cff);
+    background: linear-gradient(135deg, #5fa9ae, #5e9fb4);
     color: white;
 }
 
